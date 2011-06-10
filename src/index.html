@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html id="index" lang="en">
+<html lang="en">
 	
 	<head>
 	
@@ -25,7 +25,8 @@
 		<link rel="stylesheet" href="css/style.css"/>
 		<!--[END]-->
 		
-		<script src="js/lib/modernizr-1.7.min.js"></script>
+		<!-- MODERNIZR DEVELOPMENT VERSION -->
+		<script src="js/lib/modernizr-2.0.3.js"></script>
 		
 	</head>
 	
@@ -35,19 +36,20 @@
 		<h2>Project template with CSS minification, JS compilation and JSDoc generation</h2>
 		<div id="output" />
 		
+		<script src="js/lib/jquery-1.6.1.min.js"></script>
+		
 		<!--[BEGIN:JS:LIB]-->
-		<script src="js/lib/jquery-1.5.min.js"></script>
+		<script src="../closure-library/closure/goog/base.js"></script>
+		<script src="js/deps.js"></script>
 		<!--[END]-->
 		
 		<!--[BEGIN:JS:SRC]-->
-		<script src="js/plugins.js"></script>
-		<script src="js/namespace.js"></script>
-		<script src="js/namespace.Event.js"></script>
-		<script src="js/namespace.project.Controller.js"></script>
-		<script src="js/namespace.project.Model.js"></script>
-		<script src="js/namespace.project.View.js"></script>
 		<script src="js/namespace.project.App.js"></script>
 		<!--[END]-->
+		
+		<script>
+			namespace.project.App("index");
+		</script>
 		
 	</body>
 	

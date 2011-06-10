@@ -1,3 +1,6 @@
+goog.provide('namespace.project.Model');
+
+goog.require('Logger');
 
 /**
  * Model component of the Model View Controller implementation
@@ -5,13 +8,6 @@
  * @constructor
  */
 namespace.project.Model = function( data ) {
-	
-	/**
-	 * Dispatched when the time is updated
-	 * @type {namespace.Event}
-	 */
-	this.onTimeChanged = new namespace.Event( this );
-	
 	/**
 	 * @private
 	 * The data stored in this Model
@@ -32,5 +28,4 @@ namespace.project.Model.prototype.getTime = function() {
  */
 namespace.project.Model.prototype.setTime = function( time ) {
 	this._data.time = time;
-	this.onTimeChanged.notify( time );
 }

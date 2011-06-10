@@ -1,36 +1,40 @@
+goog.provide('namespace.project.App');
 
-/**
- * Generic onReady function called from all pages.
- * Set up your page initialisation code by adding it's ID to the switch statement
- */
-$(document).ready(function(){
-	
-	/*
-		Determine which page we are on...
-	*/
-	
-	var html = document.getElementsByTagName( "html" )[0];
-	var page = html.getAttribute( "id" );
-	
-	Logger.debug( "document.ready :: " + page );
-	
-	var	controller,
-		model,
-		view,
-		dom = {};
-	
-	switch( page ) {
+goog.require('namespace.project.Model');
+goog.require('namespace.project.Controller');
+goog.require('namespace.project.View');
+goog.require('namespace.project.Command');
+
+goog.require('Logger');
+
+namespace.project.App = function( page ) {
+	$(document).ready(function(){
+		/*
+			Determine which page we are on...
+		*/
 		
-		case "index" : default :
+		Logger.debug( "document.ready :: " + page );
 		
-			dom.output = $("#output");
+		var	controller,
+			model,
+			view,
+			dom = {};
+		
+		switch( page ) {
 			
-			model		= new namespace.project.Model();
-			controller	= new namespace.project.Controller( model );
-			view		= new namespace.project.View( model, controller, dom );
+			case "index" : default :
 			
-			controller.startTimer();
-			
-		break;
-	}
-});
+				dom.output = $("#output");
+				
+				model		= new namespace.project.Model();
+				controller	= new namespace.project.Controller( model );
+				view		= new namespace.project.View( model, controller, dom );
+				
+				controller.command(namespace.project.Command.START_TIMER);
+				
+			break;
+		}
+	});
+}
+
+goog.exportSymbol('namespace.project.App', namespace.project.App);

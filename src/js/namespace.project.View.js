@@ -1,3 +1,9 @@
+goog.provide('namespace.project.View');
+
+goog.require('namespace.project.Model');
+goog.require('namespace.project.Controller');
+
+goog.require('Logger');
 
 /**
  * View component of the Model View Controller implementation
@@ -14,9 +20,7 @@ namespace.project.View = function( model, controller, dom ) {
 	
 	var self = this;
 	
-	this._model.onTimeChanged.attach( function() {
-		self.updateTime( self._model.getTime() );
-	} );
+	this._controller.listen(this, namespace.project.Notification.TIME_UPDATED, this.updateTime);
 }
 
 /**
@@ -30,6 +34,6 @@ namespace.project.View.TIME_PREFIX = "The Time Is: ";
  * Updates the current time displayed in the view
  * @param {Date} time The time to display
  */
-namespace.project.View.prototype.updateTime = function( time ) {
-	this._dom.output.html( namespace.project.View.TIME_PREFIX + time.toString() );
+namespace.project.View.prototype.updateTime = function( ) {
+	this._dom.output.html( namespace.project.View.TIME_PREFIX + this._model.getTime().toString() );
 }

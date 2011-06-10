@@ -4,7 +4,7 @@
 
 	ANT build file for HTML/CSS/JavaScript based projects
 	
-	@author Justin Windle
+	@author Justin Windle & Fraser Hobbs
 	
 	Minifies CSS using YUI Compressor
 	Compiles JavaScript using Google Closure Compiler
@@ -16,6 +16,7 @@
 	$ ant setup
 	$ ant build
 	$ ant jsdoc
+	$ ant debug
 	
 -->
 
@@ -48,6 +49,14 @@
             <pathelement location="${ANT_CONTRIB}"/>
         </classpath>
     </taskdef>
+    
+    <!--
+	
+		Create dependancies
+		
+	-->
+	
+	<target name="debug" depends="deps" />
 
 	<!--
 	
@@ -101,14 +110,14 @@
 	<target name="setup">
 		
 		<if>
-			<available file="${SRC_DIR}/js/namespace.js" />
+			<available file="${SRC_DIR}/${JS_DIR}/namespace.project.${MAIN}.js" />
 			<then>
 				
-				<input message="Enter the full project namespace for this project:" addproperty="namespace" />
+				<var name="namespace" value="${NAMESPACE}" />
 				
 				<script language="javascript">
 					<![CDATA[
-						var namespace = new String( project.getProperty( "namespace" ) );
+						var namespace = new String(project.getProperty( "namespace" ));
 				
 						var valid = namespace.length > 1 && !/[^\.|\w]/g.test( namespace );
 						project.setProperty( "valid", valid );
@@ -168,11 +177,6 @@
 							<regexpmapper from="^(.*?)namespace\.(.*+)" to="\1${domain}.\2" />
 							<fileset dir="${SRC_DIR}" includes="**/*" />
 						</move>
-
-						<echo>Adding namespace setup...
-						</echo>
-
-						<echo message="${setup}" output="${SRC_DIR}/js/${domain}.js" />
 						
 						<input message="Remove GIT metadata?" validargs="yes,no" defaultvalue="y" addproperty="disconnect" />
 						
@@ -315,7 +319,14 @@
 							// add placeholder for current block
 							
 							var path = "@OUTPUT_" + type.toUpperCase() + "_" + format.toUpperCase() + "@";
-							content = content.replace( block[0], path );
+							if(type == "lib" && format == "js")
+							{
+								content = content.replace( block[0], "" );
+							}
+							else
+							{
+								content = content.replace( block[0], path );
+							}
 
 							// update properties
 							
@@ -381,20 +392,6 @@
 			<filelist dir="${SRC_DIR}" files="${blocks.src.css}"/>
 		</concat>
 		
-		<echo>Combining JavaScript Libraries...
-		</echo>
-		
-		<concat destfile="${BUILD_DIR}/${OUTPUT_LIB_JS}" append="true">
-			<filelist dir="${SRC_DIR}" files="${blocks.lib.js}"/>
-		</concat>
-		
-		<echo>Combining JavaScript Sources...
-		</echo>
-		
-		<concat destfile="${BUILD_DIR}/${OUTPUT_SRC_JS}" append="true">
-			<filelist dir="${SRC_DIR}" files="${blocks.src.js}"/>
-		</concat>
-		
 		<echo>Copying Referenced Files...
 		</echo>
 			
@@ -425,14 +422,37 @@
 		<echo>Compiling '${OUTPUT_SRC_JS}' with Closure Compiler...
 		</echo>
 		
-		<jscomp compilationLevel="${COMPILATION}" warning="${WARNINGS}" debug="false" output="${BUILD_DIR}/${OUTPUT_SRC_JS}">
-			<externs dir="">
-				<file name="${EXTERNS}" />
-			</externs>
-			<sources dir="">
-				<file name="${BUILD_DIR}/${OUTPUT_SRC_JS}" />
-			</sources>
-		</jscomp>
+		<exec executable="python" failonerror="yes">
+			<arg line='${CLOSURE_BUILDER}'/>
+			<arg line='--root=${CLOSURE_LIB}' />
+			<arg line='--root=${SRC_DIR}/${JS_DIR}/'/>
+			<arg line='--namespace="${NAMESPACE}.${MAIN}"'/>
+			<arg line='--output_mode=compiled'/>
+			<arg line='--compiler_jar=${COMPILER}'/>
+			<arg line='--compiler_flags="--compilation_level=${COMPILATION}"'/>
+			<arg line='--compiler_flags="--externs=${SRC_DIR}/${EXTERNS}"'/>
+			<arg line='--output_file=${BUILD_DIR}/${OUTPUT_SRC_JS}'/>
+		</exec>
+		
+	</target>
+	
+	<!--
+	
+		Create dependancies
+		
+	-->
+	
+	<target	name="deps">
+		
+		<echo>Create dependancies js
+		</echo>
+		
+		<exec executable="python" failonerror="yes">
+			<arg line='${DEPS_WRITER}'/>
+			<arg line='--root_with_prefix="${SRC_DIR}/${JS_DIR}/ ../../../${SRC_DIR}/${JS_DIR}/"' />
+			<arg line='--output_file=${SRC_DIR}/${DEPS}'/>
+		</exec>
+		
 	</target>
 	
 	<!--
