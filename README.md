@@ -33,6 +33,7 @@ This will refactor the project template to match your namespace. You'll then be 
 ###Now Start Coding!
 
 In your HTML files keep your code in the following block comments:
+
 * CSS:LIB - For CSS libraries
 * CSS:SRC - For your CSS
 * JS:LIB - For closure Javascript (You shouldn't need to change this)
