@@ -43,19 +43,19 @@ Scripts and styles embedded outside of blocks will remain untouched to add flexi
 
 Springboard supports blocks for both third party libraries and project source files in CSS and JavaScript. Libraries used by your project are combined to reduce HTTP requests but not minfied, whereas project source files are.
 
-Springboard uses [externs](http://code.google.com/closure/compiler/docs/api-tutorial3.html) to manage compiled code dependancies and ships with externs for [JQuery 1.5](http://jquery.com/). Externs for other libraries can be generated using [Closure Compiler Externs Extractor](http://www.dotnetwise.com/Code/Externs/index.html).
+Springboard uses [externs](http://code.google.com/closure/compiler/docs/api-tutorial3.html) to manage compiled code dependancies and ships with externs for [JQuery 1.6.1](http://jquery.com/). Externs for other libraries can be generated using [Closure Compiler Externs Extractor](http://www.dotnetwise.com/Code/Externs/index.html).
 
-###Debugging
+###Update Dependencies
 
-As you add new classes you will need to update the dependancies so the Closure Library can dynamically locate the right Javascript files for the right classes.
+As you add new classes you will need to update the dependencies so the Closure Library can dynamically locate the right Javascript files for the right classes.
 
-To do this, run **debug**:
+To do this, run **update**:
 
-	ant debug
+	ant update
 
 ###Building
 
-To compile your project and create a release version, run **build**:
+To compile your project and create a deploy version, run **build**:
 
 	ant build
 

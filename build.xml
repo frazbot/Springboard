@@ -52,11 +52,11 @@
     
     <!--
 	
-		Create dependancies
+		Update dependencies
 		
 	-->
 	
-	<target name="debug" depends="deps" />
+	<target name="update" depends="deps" />
 
 	<!--
 	
@@ -438,13 +438,13 @@
 	
 	<!--
 	
-		Create dependancies
+		Create dependencies
 		
 	-->
 	
 	<target	name="deps">
 		
-		<echo>Create dependancies js
+		<echo>Create dependencies js
 		</echo>
 		
 		<exec executable="python" failonerror="yes">
