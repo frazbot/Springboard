@@ -449,7 +449,7 @@
 		
 		<exec executable="python" failonerror="yes">
 			<arg line='${DEPS_WRITER}'/>
-			<arg line='--root_with_prefix="${SRC_DIR}/${JS_DIR}/ ../../../${SRC_DIR}/${JS_DIR}/"' />
+			<arg line='--root_with_prefix="${SRC_DIR}/${JS_DIR}/ ../../../../${SRC_DIR}/${JS_DIR}/"' />
 			<arg line='--output_file=${SRC_DIR}/${DEPS}'/>
 		</exec>
 		
