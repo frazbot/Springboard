@@ -1,4 +1,39 @@
 // Generated using http://www.dotnetwise.com/Code/Externs/index.html
+
+//YouTube
+var onYouTubePlayerReady = function(){ };
+
+//SWFObject
+var swfobject = {
+    "registerObject": function () {},
+    "getObjectById": function () {},
+    "embedSWF": function () {},
+    "switchOffAutoHideShow": function () {},
+    "ua": {
+        "w3": {},
+        "pv": {
+            "0": {},
+            "1": {},
+            "2": {}
+        },
+        "wk": {},
+        "ie": {},
+        "win": {},
+        "mac": {}
+    },
+    "getFlashPlayerVersion": function () {},
+    "hasFlashPlayerVersion": function () {},
+    "createSWF": function () {},
+    "showExpressInstall": function () {},
+    "removeSWF": function () {},
+    "createCSS": function () {},
+    "addDomLoadEvent": function () {},
+    "addLoadEvent": function () {},
+    "getQueryParamValue": function () {},
+    "expressInstallCallback": function () {}
+}
+
+//JQuery
 var $ = {
     "fn": {
         "constructor": function () {},
@@ -580,4 +615,651 @@ var $ = {
         "setOffset": function () {}
     },
     "boxModel": {}
+}
+
+//FACEBOOK
+
+var FB = {
+    "_apiKey": function () {},
+    "_session": function () {},
+    "_userStatus": {},
+    "_logging": {},
+    "_inCanvas": {},
+    "_https": {},
+    "_domain": {
+        "api": {},
+        "api_read": {},
+        "cdn": {},
+        "graph": {},
+        "https_cdn": {},
+        "https_staticfb": {},
+        "https_www": {},
+        "staticfb": {},
+        "www": {}
+    },
+    "_locale": {},
+    "_localeIsRtl": {},
+    "getDomain": function () {},
+    "copy": function () {},
+    "create": function () {},
+    "provide": function () {},
+    "guid": function () {},
+    "log": function () {},
+    "$": function () {},
+    "Array": {
+        "indexOf": function () {},
+        "merge": function () {},
+        "filter": function () {},
+        "keys": function () {},
+        "map": function () {},
+        "forEach": function () {}
+    },
+    "QS": {
+        "encode": function () {},
+        "decode": function () {}
+    },
+    "Content": {
+        "_root": function () {},
+        "_hiddenRoot": function () {},
+        "_callbacks": function () {},
+        "append": function () {},
+        "appendHidden": function () {},
+        "insertIframe": function () {},
+        "submitToTarget": function () {}
+    },
+    "Flash": {
+        "_minVersions": {
+            "0": {
+                "0": {},
+                "1": {},
+                "2": {},
+                "3": {}
+            }
+        },
+        "_swfPath": {},
+        "_callbacks": function () {},
+        "init": function () {},
+        "embedSWF": function () {},
+        "hasMinVersion": function () {},
+        "onReady": function () {}
+    },
+    "JSON": {
+        "stringify": function () {},
+        "parse": function () {},
+        "flatten": function () {}
+    },
+    "api": function () {},
+    "ApiServer": {
+        "METHODS": {
+            "0": {},
+            "1": {},
+            "2": {},
+            "3": {}
+        },
+        "_callbacks": function () {},
+        "_readOnlyCalls": {
+            "fql_query": {},
+            "fql_multiquery": {},
+            "friends_get": {},
+            "notifications_get": {},
+            "stream_get": {},
+            "users_getinfo": {}
+        },
+        "graph": function () {},
+        "rest": function () {},
+        "oauthRequest": function () {},
+        "jsonp": function () {},
+        "flash": function () {}
+    },
+    "EventProvider": {
+        "subscribers": function () {},
+        "subscribe": function () {},
+        "unsubscribe": function () {},
+        "monitor": function () {},
+        "clear": function () {},
+        "fire": function () {}
+    },
+    "Event": {
+        "subscribers": function () {},
+        "subscribe": function () {},
+        "unsubscribe": function () {},
+        "monitor": function () {},
+        "clear": function () {},
+        "fire": function () {},
+        "_subscribersMap": function () {}
+    },
+    "bind": function () {},
+    "Class": function () {},
+    "subclass": function () {},
+    "CLASSES": {
+        "Obj": function () {},
+        "TemplateUI": function () {},
+        "Waitable": function () {},
+        "Data.Query": function () {},
+        "XFBML.Element": function () {},
+        "XFBML.IframeWidget": function () {},
+        "XFBML.Activity": function () {},
+        "XFBML.ButtonElement": function () {},
+        "XFBML.AddProfileTab": function () {},
+        "XFBML.Bookmark": function () {},
+        "XFBML.Comments": function () {},
+        "XFBML.CommentsCount": function () {},
+        "XFBML.ConnectBar": function () {},
+        "XFBML.Facepile": function () {},
+        "XFBML.Fan": function () {},
+        "XFBML.Friendpile": function () {},
+        "XFBML.EdgeCommentWidget": function () {},
+        "XFBML.EdgeWidget": function () {},
+        "XFBML.SendButtonFormWidget": function () {},
+        "XFBML.Send": function () {},
+        "XFBML.Like": function () {},
+        "XFBML.LikeBox": function () {},
+        "XFBML.LiveStream": function () {},
+        "XFBML.Login": function () {},
+        "XFBML.LoginButton": function () {},
+        "XFBML.Name": function () {},
+        "XFBML.ProfilePic": function () {},
+        "XFBML.Recommendations": function () {},
+        "XFBML.Registration": function () {},
+        "XFBML.ServerFbml": function () {},
+        "XFBML.ShareButton": function () {},
+        "XFBML.SocialBar": function () {}
+    },
+    "Type": {
+        "isType": function () {}
+    },
+    "Obj": function () {},
+    "Helper": {
+        "isUser": function () {},
+        "getLoggedInUser": function () {},
+        "upperCaseFirstChar": function () {},
+        "getProfileLink": function () {},
+        "invokeHandler": function () {},
+        "fireEvent": function () {},
+        "executeFunctionByName": function () {}
+    },
+    "TemplateData": {
+        "_gkTimeout": {},
+        "_localStorageTimeout": {},
+        "available": function () {},
+        "supportsLocalStorage": function () {},
+        "localStorageStale": function () {},
+        "gkValid": function () {},
+        "gkSuccess": function () {},
+        "getResponse": function () {},
+        "saveResponse": function () {},
+        "getData": function () {},
+        "getCurrentUserID": function () {},
+        "init": function () {},
+        "clear": function () {},
+        "update": function () {}
+    },
+    "UA": {
+        "ie": function () {},
+        "firefox": function () {},
+        "opera": function () {},
+        "safari": function () {},
+        "chrome": function () {},
+        "windows": function () {},
+        "osx": function () {},
+        "linux": function () {},
+        "ios": function () {},
+        "mobile": function () {},
+        "android": function () {},
+        "nativeApp": function () {},
+        "_populated": {},
+        "_populate": function () {},
+        "_android": function () {},
+        "_mobile": function () {},
+        "_ie": {},
+        "_firefox": {},
+        "_opera": {},
+        "_safari": {},
+        "_chrome": {},
+        "_osx": {},
+        "_windows": {},
+        "_linux": {},
+        "_ios": function () {}
+    },
+    "XD": {
+        "_origin": function () {},
+        "_transport": function () {},
+        "_callbacks": function () {},
+        "_forever": function () {},
+        "_xdProxyUrl": {},
+        "_openerTransport": function () {},
+        "_openerOrigin": function () {},
+        "_nonOpenerOrigin": function () {},
+        "init": function () {},
+        "resolveRelation": function () {},
+        "handler": function () {},
+        "recv": function () {},
+        "PostMessage": {
+            "_isInitialized": {},
+            "init": function () {},
+            "onMessage": function () {}
+        },
+        "WebView": {
+            "onMessage": function () {}
+        },
+        "Flash": {
+            "init": function () {},
+            "onMessage": function () {}
+        },
+        "Fragment": {
+            "_magic": {},
+            "checkAndDispatch": function () {}
+        }
+    },
+    "Arbiter": {
+        "_canvasProxyUrl": {},
+        "inform": function () {}
+    },
+    "Canvas": {
+        "_timer": function () {},
+        "_lastSize": function () {},
+        "_pageInfo": {
+            "clientWidth": {},
+            "clientHeight": {},
+            "scrollLeft": {},
+            "scrollTop": {},
+            "offsetLeft": {},
+            "offsetTop": {}
+        },
+        "_pageInfoPollInterval": {},
+        "init": function () {},
+        "setSize": function () {},
+        "scrollTo": function () {},
+        "setAutoResize": function () {},
+        "isTabIframe": function () {},
+        "getPageInfo": function () {},
+        "setDoneLoading": function () {},
+        "stopTimer": function () {},
+        "startTimer": function () {},
+        "_passAppTtiMessage": function () {},
+        "_computeContentSize": function () {},
+        "EarlyFlush": {
+            "_sampleRate": {},
+            "_appIdsBlacklist": function () {},
+            "_links": function () {},
+            "addResource": function () {},
+            "_maybeSample": function () {},
+            "_sample": function () {}
+        }
+    },
+    "Intl": {
+        "_punctCharClass": {},
+        "_endsInPunct": function () {},
+        "_tx": function () {},
+        "tx": function () {}
+    },
+    "String": {
+        "trim": function () {},
+        "format": function () {},
+        "escapeHTML": function () {},
+        "quote": function () {}
+    },
+    "Dom": {
+        "containsCss": function () {},
+        "addCss": function () {},
+        "removeCss": function () {},
+        "getStyle": function () {},
+        "setStyle": function () {},
+        "addScript": function () {},
+        "addCssRules": function () {},
+        "getViewportInfo": function () {},
+        "ready": function () {},
+        "_isReady": {},
+        "_cssRules": {
+            "fb.css.base": {},
+            "fb.css.dialog": {},
+            "fb.css.iframewidget": {},
+            "fb.css.button": {},
+            "fb.css.sharebutton": {},
+            "fb.css.connectbarwidget": {},
+            "fb.css.edgecommentwidget": {},
+            "fb.css.sendbuttonformwidget": {},
+            "fb.css.socialbarwidget": {}
+        }
+    },
+    "Dialog": {
+        "_loaderEl": function () {},
+        "_stack": function () {},
+        "_active": function () {},
+        "_findRoot": function () {},
+        "_showLoader": function () {},
+        "_hideLoader": function () {},
+        "_makeActive": function () {},
+        "_lowerActive": function () {},
+        "_removeStacked": function () {},
+        "_centerActive": function () {},
+        "create": function () {},
+        "show": function () {},
+        "hide": function () {},
+        "remove": function () {}
+    },
+    "TemplateUI": function () {},
+    "ui": function () {},
+    "UIServer": {
+        "Methods": {
+            "permissions.request": {
+                "size": {
+                    "width": {},
+                    "height": {}
+                },
+                "transform": function () {}
+            },
+            "auth.logout": {
+                "url": {},
+                "transform": function () {}
+            },
+            "auth.status": {
+                "url": {},
+                "transform": function () {}
+            },
+            "stream.share": {
+                "size": {
+                    "width": {},
+                    "height": {}
+                },
+                "url": {},
+                "transform": function () {}
+            },
+            "fbml.dialog": {
+                "size": {
+                    "width": {},
+                    "height": {}
+                },
+                "url": {},
+                "loggedOutIframe": {},
+                "transform": function () {}
+            },
+            "auth.logintofacebook": {
+                "size": {
+                    "width": {},
+                    "height": {}
+                },
+                "url": {},
+                "transform": function () {}
+            },
+            "apprequests": {
+                "transform": function () {},
+                "getXdRelation": function () {}
+            },
+            "feed": {
+                "transform": function () {},
+                "getXdRelation": function () {}
+            },
+            "auth.login": {
+                "size": {
+                    "width": {},
+                    "height": {}
+                },
+                "transform": function () {}
+            },
+            "pay.prompt": {
+                "transform": function () {}
+            },
+            "pay": {
+                "size": {
+                    "width": {},
+                    "height": {}
+                },
+                "noHttps": {},
+                "connectDisplay": {},
+                "transform": function () {}
+            }
+        },
+        "_active": function () {},
+        "_defaultCb": function () {},
+        "_resultToken": {},
+        "genericTransform": function () {},
+        "prepareCall": function () {},
+        "prepareParams": function () {},
+        "urlTooLongForIE": function () {},
+        "getDisplayMode": function () {},
+        "getXdRelation": function () {},
+        "popup": function () {},
+        "touch": function () {},
+        "hidden": function () {},
+        "iframe": function () {},
+        "async": function () {},
+        "getDefaultSize": function () {},
+        "_insertIframe": function () {},
+        "_triggerDefault": function () {},
+        "_popupMonitor": function () {},
+        "_xdChannelHandler": function () {},
+        "_xdNextHandler": function () {},
+        "_xdRecv": function () {},
+        "_xdResult": function () {},
+        "MobileIframableMethod": {
+            "transform": function () {},
+            "getXdRelation": function () {}
+        }
+    },
+    "getLoginStatus": function () {},
+    "getSession": function () {},
+    "login": function () {},
+    "logout": function () {},
+    "Auth": {
+        "_callbacks": function () {},
+        "setSession": function () {},
+        "xdHandler": function () {},
+        "xdResponseWrapper": function () {}
+    },
+    "Cookie": {
+        "_domain": function () {},
+        "_enabled": {},
+        "setEnabled": function () {},
+        "getEnabled": function () {},
+        "load": function () {},
+        "setRaw": function () {},
+        "set": function () {},
+        "clear": function () {}
+    },
+    "Frictionless": {
+        "_allowedRecipients": function () {},
+        "_useFrictionless": {},
+        "_updateRecipients": function () {},
+        "init": function () {},
+        "_processRequestResponse": function () {},
+        "isAllowed": function () {}
+    },
+    "initSitevars": {
+        "parseXFBMLBeforeDomReady": {},
+        "iframePermissions": {
+            "read_stream": {},
+            "manage_mailbox": {},
+            "manage_friendlists": {},
+            "read_mailbox": {},
+            "publish_checkins": {},
+            "status_update": {},
+            "photo_upload": {},
+            "video_upload": {},
+            "sms": {},
+            "create_event": {},
+            "rsvp_event": {},
+            "offline_access": {},
+            "email": {},
+            "xmpp_login": {},
+            "create_note": {},
+            "share_item": {},
+            "export_stream": {},
+            "publish_stream": {},
+            "publish_likes": {},
+            "ads_management": {},
+            "contact_email": {},
+            "access_private_data": {},
+            "read_insights": {},
+            "read_requests": {},
+            "read_friendlists": {},
+            "manage_pages": {},
+            "physical_login": {},
+            "manage_groups": {},
+            "read_deals": {}
+        }
+    },
+    "init": function () {},
+    "CanvasInsights": {
+        "setDoneLoading": function () {}
+    },
+    "share": function () {},
+    "publish": function () {},
+    "addFriend": function () {},
+    "XFBML": {
+        "_renderTimeout": {},
+        "parse": function () {},
+        "registerTag": function () {},
+        "shouldUseWidgetPipe": function () {},
+        "_processElement": function () {},
+        "_getDomElements": function () {},
+        "_tagInfos": {
+            "0": {
+                "localName": {},
+                "className": {}
+            },
+            "1": {
+                "localName": {},
+                "className": {}
+            },
+            "2": {
+                "localName": {},
+                "className": {}
+            },
+            "3": {
+                "localName": {},
+                "className": {}
+            },
+            "4": {
+                "localName": {},
+                "className": {}
+            },
+            "5": {
+                "localName": {},
+                "className": {}
+            },
+            "6": {
+                "localName": {},
+                "className": {}
+            },
+            "7": {
+                "localName": {},
+                "className": {},
+                "supportsWidgetPipe": {}
+            },
+            "8": {
+                "localName": {},
+                "className": {}
+            },
+            "9": {
+                "localName": {},
+                "className": {}
+            },
+            "10": {
+                "localName": {},
+                "className": {}
+            },
+            "11": {
+                "localName": {},
+                "className": {}
+            },
+            "12": {
+                "localName": {},
+                "className": {}
+            },
+            "13": {
+                "localName": {},
+                "className": {}
+            },
+            "14": {
+                "localName": {},
+                "className": {}
+            },
+            "15": {
+                "localName": {},
+                "className": {}
+            },
+            "16": {
+                "localName": {},
+                "className": {}
+            },
+            "17": {
+                "localName": {},
+                "className": {}
+            },
+            "18": {
+                "localName": {},
+                "className": {}
+            },
+            "19": {
+                "localName": {},
+                "className": {}
+            },
+            "20": {
+                "localName": {},
+                "className": {}
+            },
+            "21": {
+                "localName": {},
+                "className": {}
+            }
+        },
+        "_widgetPipeEnabledTagCount": {},
+        "_widgetPipeIsEnabled": function () {},
+        "set": function () {},
+        "Element": function () {},
+        "IframeWidget": function () {},
+        "Activity": function () {},
+        "ButtonElement": function () {},
+        "AddProfileTab": function () {},
+        "Bookmark": function () {},
+        "Comments": function () {},
+        "CommentsCount": function () {},
+        "ConnectBar": function () {},
+        "Facepile": function () {},
+        "Fan": function () {},
+        "Friendpile": function () {},
+        "EdgeCommentWidget": function () {},
+        "EdgeWidget": function () {},
+        "SendButtonFormWidget": function () {},
+        "Send": function () {},
+        "Like": function () {},
+        "LikeBox": function () {},
+        "LiveStream": function () {},
+        "Login": function () {},
+        "LoginButton": function () {},
+        "Name": function () {},
+        "ProfilePic": function () {},
+        "Recommendations": function () {},
+        "Registration": function () {},
+        "ServerFbml": function () {},
+        "ShareButton": function () {},
+        "SocialBar": function () {}
+    },
+    "Waitable": function () {},
+    "Data": {
+        "Query": function () {},
+        "query": function () {},
+        "waitOn": function () {},
+        "_getValue": function () {},
+        "_selectByIndex": function () {},
+        "_waitToProcess": function () {},
+        "_process": function () {},
+        "_mergeIndexQuery": function () {},
+        "timer": {},
+        "queue": function () {}
+    },
+    "Anim": {
+        "ate": function () {},
+        "_parseCSS": function () {}
+    },
+    "Insights": {
+        "impression": function () {}
+    },
+    "widgetPipeEnabledApps": {
+        "111476658864976": {},
+        "cca6477272fc5cb805f85a84f20fca1d": {},
+        "179150165472010": {}
+    },
+    "widgetPipeTagCountThreshold": {}
 }
