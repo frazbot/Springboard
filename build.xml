@@ -431,6 +431,7 @@
 			<arg line='--compiler_jar=${COMPILER}'/>
 			<arg line='--compiler_flags="--compilation_level=${COMPILATION}"'/>
 			<arg line='--compiler_flags="--externs=${SRC_DIR}/${EXTERNS}"'/>
+			<arg line='--compiler_flags="--warning_level=VERBOSE"'/>
 			<arg line='--output_file=${BUILD_DIR}/${OUTPUT_SRC_JS}'/>
 		</exec>
 		
